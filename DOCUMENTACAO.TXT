@@ -1,0 +1,16 @@
+bd MySQL rodando no Docker
+app Next.js rodando localmente
+ORM Prisma
+Para detalhes de como rodar a aplicação olhar o README.md
+
+2 Entidades:
+  Autor (id, nome, Posts)
+  Post (id, titulo, conteudo, autorId)
+
+Tela inicial com links para a listagem de Autores e de Posts.
+Tela de listagem de Autores com opção de criar novo Autor, ou selecionar um Autor listado para ver detalhes.
+Tela de listagem de Posts com opção de criar novo Post, ou selecionar um Post listado para ver detalhes.
+Telas para criação de Autor e Post.
+Telas de detalhamento de Autor e Post permitem edição e exclusão*.
+
+* Autor só poderá ser excluído se não tiver Post de sua autoria.

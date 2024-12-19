@@ -1,36 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Descrição do Desafio
 
-## Getting Started
+Desenvolver uma aplicação Fullstack utilizando Next.js, tRPC, Prisma, MySQL, Tailwind CSS e executável via Docker, que permita gerenciar um conteúdo simples composto por duas entidades relacionadas: Authors e Posts. O objetivo é criar um CRUD completo, exibindo e manipulando dados em uma interface web simples, mas funcional, no período estimado de até 4 horas.
 
-First, run the development server:
+Especificações Gerais • Entidades: • Author: Representa um autor. Deve ser possível criar, listar, atualizar e remover. • Post: Representa um post. Deve ser possível criar, listar, atualizar e remover. Um Post deve estar associado a um Author. • Relacionamento: Cada Post pertence a um Author. • Interface: • Página para listar Posts e, ao interagir, acessar detalhes ou editar. • Página ou seção para criar/editar Posts. • Página ou seção para gerenciar Authors. • Layout responsivo e simples com Tailwind CSS. • Back-end: • Endpoints tRPC para CRUD completo de Authors e Posts. • Prisma como ORM, rodando migrações para criar as tabelas no MySQL. • MySQL & Docker: • Configuração do ambiente via docker-compose para rodar banco de dados e aplicação. • Dockerfile para containerizar a aplicação. • Código & Organização: • Uso de TypeScript em todo o projeto. • Código limpo, bem estruturado e com organização coerente de rotas, componentes e serviços. • Documentação: • README explicando resumidamente como subir o ambiente (build, migrações, docker-compose up) e como acessar a aplicação localmente.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Neste momento só a base de dados está subindo no Docker, a aplicação dá um erro que não consigo resolver (Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.) quando tento o comando "prisma generate" (O termo 'prisma' não é reconhecido como nome de cmdlet...).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Então para subir a bd: docker-compose up -d
+Executar migrações: npx prisma migrate dev --name init   npx prisma generate
+Para subir a aplicação:  npm run dev (no diretório do projeto)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+acessar app via http://localhost:3000/
