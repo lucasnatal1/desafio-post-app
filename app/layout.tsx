@@ -31,15 +31,17 @@ export default function RootLayout({
       >
         
         <nav className="bg-gray-800">
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
+          {/* <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8"> */}
+            <div className="relative flex h-16 items-center justify-between custom-container">
                 <Link href="/" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
                   Início
                 </Link>
             </div>
-          </div>
+          {/* </div> */}
         </nav>
-        <Provider>{children}</Provider>
+        <div className="custom-container">
+          <Provider>{children}</Provider>
+        </div>
       </body>
     </html>
   );

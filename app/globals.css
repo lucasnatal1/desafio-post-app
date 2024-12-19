@@ -19,3 +19,14 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.custom-container {
+  width: 65%;
+  margin-inline: auto;
+}
+
+@media (max-width: 764px) {
+  .custom-container {
+    width: 80%;
+  }
+}
