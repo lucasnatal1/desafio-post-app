@@ -1,4 +1,3 @@
-"use client";
 // import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -30,13 +29,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav>
-        <button>
-          <Link href="/" className="text-blue-500 hover:text-blue-700 mt-4 inline-block">
-            Início
-          </Link>
-        </button>
-      </nav>
+        
+        <nav className="bg-gray-800">
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div className="relative flex h-16 items-center justify-between">
+                <Link href="/" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                  Início
+                </Link>
+            </div>
+          </div>
+        </nav>
         <Provider>{children}</Provider>
       </body>
     </html>

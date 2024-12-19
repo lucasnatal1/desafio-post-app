@@ -22,8 +22,8 @@ export default function PostsPage() {
           </div>
         ))}
       </div>
-      <Link href="/posts/new" className="text-blue-500 hover:text-blue-700 mt-4 inline-block">
-        Adicionar Novo Post
+      <Link href="/posts/new" className="bg-blue-500 hover:bg-blue-700 mt-4 px-4 py-2 rounded-md text-white inline-block">
+        Adicionar Post
       </Link>
     </div>
   );

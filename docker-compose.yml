@@ -1,11 +1,14 @@
-version: '3'
 services:
-  web:
-    build: .
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+        - .:/app
+        - /app/node_modules
+        - /app/.next
     ports:
       - "3000:3000"
-    env_file:
-      - .env
     depends_on:
       - db
   db:

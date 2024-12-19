@@ -1,3 +1,4 @@
+import { Author } from "@/models/Author";
 import { procedure, router } from "./trpc";
 import { PrismaClient } from "@prisma/client";
 import { z } from "zod";

@@ -1,5 +1,4 @@
 "use client";
-
 import { trpc } from '@/app/_trpc/client';
 import { Author } from '@/models/Author';
 import Link from 'next/link';
@@ -22,8 +21,8 @@ export default function AuthorsPage() {
           </div>
         ))}
       </div>
-      <Link href="/authors/new" className="text-blue-500 hover:text-blue-700 mt-4 inline-block">
-        Adicionar Novo Autor
+      <Link href="/authors/new" className="bg-blue-500 hover:bg-blue-700 mt-4 px-4 py-2 rounded-md text-white inline-block">
+        Adicionar Autor
       </Link>
     </div>
   );
